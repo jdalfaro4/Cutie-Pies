@@ -30,6 +30,5 @@ $(document).ready(function() {
         $(this).addClass('hide');
         $(this).prev('.atcBtn').removeClass('hide');
         console.log(items)
-
     });
 });
