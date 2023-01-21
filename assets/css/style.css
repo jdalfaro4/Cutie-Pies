@@ -40,3 +40,6 @@ body {
 p, img {
     float: right;
 }
+.hide {
+    display: none;
+}
