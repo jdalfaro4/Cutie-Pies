@@ -39,8 +39,10 @@ $(document).ready(function() {
     
     //Updates the cart within the sticky to reflect the current cart.
     function refreshCart () {
+        //TODO change information to make it readable
         var currentCart = localStorage.getItem("AddedToCart");
         console.log(items);
+        //TODO appened the AddedToCart to the container :: <ul></ul> or <p></p>
         
     };
 });
