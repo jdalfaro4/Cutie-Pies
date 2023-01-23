@@ -13,6 +13,8 @@ $(document).ready(function() {
         $(this).addClass('hide');
         $(this).next('.rmBtn').removeClass('hide');
         console.log(items)
+        //Updates the cart within the sticky to reflect the current cart.
+        refreshCart()
     });
 
     //REMOVE FROM CART button
@@ -26,9 +28,16 @@ $(document).ready(function() {
         //(index, 1) :: the index variable is the location where the splice will begin, and the 1 refers to the number of elements to remove. 
         items.splice(index, 1);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
-        //This changes classes to reflect the state of an item being in the cart or out.
+        //This changes classes to reflect thrfge state of an item being in the cart or out.
         $(this).addClass('hide');
         $(this).prev('.atcBtn').removeClass('hide');
         console.log(items)
+        //Updates the cart within the sticky to reflect the current cart.
+        refreshCart() 
     });
+    
+    //Updates the cart within the sticky to reflect the current cart.
+    function refreshCart () {
+        console.log(items)
+    };
 });
