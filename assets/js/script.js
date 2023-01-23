@@ -1,4 +1,5 @@
 var items = []
+var cart = document.getElementById('.cartSticky')
 $(document).ready(function() {
     
     //ADD TO CART button 
@@ -38,6 +39,8 @@ $(document).ready(function() {
     
     //Updates the cart within the sticky to reflect the current cart.
     function refreshCart () {
-        console.log(items)
+        var currentCart = localStorage.getItem("AddedToCart");
+        console.log(items);
+        
     };
 });
