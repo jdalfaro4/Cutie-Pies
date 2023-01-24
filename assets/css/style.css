@@ -1,28 +1,40 @@
 
+/* color scheme:
+#FFB5A7 dark pink
+#FCD5CE medium pink
+#F8EDEB light pink
+#F9DCC4 light peach
+#FEC89A peach */
+
+body {
+}
 
 .header {
+    color: rgb(235, 99, 99); 
     height: 10rem;
     text-align: center;
-    border-style: solid;
-    color: aliceblue;
+    background-color: #FCD5CE; 
+    border-style: 1px solid white;
     font-size: 5rem;
+    font-family: 'Fredoka One', cursive;
 }
+
 .navbar {
     height: 4rem;
-    background-color: aqua;
+    background-color: #FFB5A7; 
     text-align: right;
 }
 .navbar-btn {
     height: 4rem;
     width: 10rem;
     border-style: none;
-    background-color: aqua;
+    background-color: #FFB5A7; 
 }
 .product-container {
     height: 15rem;
     display: flex;
     align-items: center;
-    background-color: blueviolet;
+    background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
 }
