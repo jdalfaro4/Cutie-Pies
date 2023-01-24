@@ -33,6 +33,5 @@ $(document).ready(function() {
             cartSticky.innerHTML += "<li>" + currentCart[i] + "</li>";
         }
         cartSticky.innerHTML += "</ul>";  
-        console.log('Cart sticky updated')
     };
 });
