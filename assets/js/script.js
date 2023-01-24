@@ -1,5 +1,5 @@
 var items = []
-var cart = document.getElementById('.cartSticky')
+
 $(document).ready(function() {
     
     //ADD TO CART button 
@@ -11,7 +11,7 @@ $(document).ready(function() {
         items.push(flavor)
         localStorage.setItem("AddedToCart", JSON.stringify(items));
         //This changes classes to reflect the state of an item being in the cart or out.
-        $(this).addClass('hide');
+        // $(this).addClass('hide');
         $(this).next('.rmBtn').removeClass('hide');
         console.log(items)
         //Updates the cart within the sticky to reflect the current cart.
@@ -30,19 +30,25 @@ $(document).ready(function() {
         items.splice(index, 1);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
         //This changes classes to reflect thrfge state of an item being in the cart or out.
-        $(this).addClass('hide');
-        $(this).prev('.atcBtn').removeClass('hide');
+        // $(this).addClass('hide');
+        // $(this).prev('.atcBtn').removeClass('hide');
         console.log(items)
         //Updates the cart within the sticky to reflect the current cart.
         refreshCart() 
     });
-    
+
+    var cartSticky = document.getElementById('#cartSticky')
     //Updates the cart within the sticky to reflect the current cart.
     function refreshCart () {
         //TODO change information to make it readable
-        var currentCart = localStorage.getItem("AddedToCart");
-        console.log(items);
+        var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
+        cartSticky.innerHTML = "<ul>";
+        for (let i = 0; i < currentCart.length; i ++) {
+            cartSticky.innerHTML += "<li>" + currentCart[i] + "</li>";
+        }
+        cartSticky.innerHTML = "</ul>"
         //TODO appened the AddedToCart to the container :: <ul></ul> or <p></p>
+
         
     };
 });
