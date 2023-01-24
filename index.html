@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Cutie Pies</title>
 </head>
 <body>
-
     <div>
-        
+        <div class="header">header</div>
+        <div class="navbar">
+            <a href="assets/html/about.html">
+                <button class="navbar-btn">About</button>
+            </a>
+            <button class="navbar-btn">Contact</button>
+            <button class="navbar-btn">Cart</button>
+        </div>
+        <div>
+            <div class="product-container">
+                <button class="atcBtn" data-flavor="oreo">Add to Cart</button>
+                <button class="rmBtn hide" data-flavor="oreo">Remove from Cart</button>
+                <p>Product Description</p>
+                <img>
+            </div>
+            <div class="product-container">
+                <button class="atcBtn" data-flavor="lemon">Add to Cart</button>
+                <button class="rmBtn hide" data-flavor="lemon">Remove from Cart</button>
+                <p>Product Description</p>
+                <img>
+            </div>
+            <div class="product-container">
+                <button class="atcBtn" data-flavor="grass">Add to Cart</button>
+                <button class="rmBtn hide" data-flavor="grass">Remove from Cart</button>
+                <p class="product-descsription">Product Description</p>
+                <img>
+            </div>
+            <div class="product-container">
+                <p Id="cartSticky">Temporary Sticky// CART </p>
+                <img>
+            </div>
+        </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
