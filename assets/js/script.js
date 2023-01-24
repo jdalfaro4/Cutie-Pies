@@ -1,6 +1,16 @@
 var items = []
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+
 $(document).ready(function() {
+    
+    $('.sidenav').sidenav();
     
     //ADD TO CART button 
     $('.atcBtn').click(function() {
@@ -35,4 +45,5 @@ $(document).ready(function() {
         cartSticky.innerHTML += "</ul>";  
     }
     console.log('Cart sticky updated')
+    
 });
