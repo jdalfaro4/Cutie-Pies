@@ -1,0 +1,45 @@
+
+body {
+}
+.header {
+    height: 10rem;
+    text-align: center;
+    border-style: solid;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: 5rem;
+}
+.navbar {
+    height: 4rem;
+    background-color: aqua;
+    text-align: right;
+}
+.navbar-btn {
+    height: 4rem;
+    width: 10rem;
+    border-style: none;
+    background-color: aqua;
+}
+.product-container {
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+    border-style: solid;
+    border-color: white;
+}
+.addtocart-btn {
+    margin: 5rem;
+    height: 6rem;
+    width: 12rem;
+    background-color: white;
+}
+.product-description {
+
+}
+p, img {
+    float: right;
+}
+.hide {
+    display: none;
+}
