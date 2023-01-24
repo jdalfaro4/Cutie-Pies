@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> e172b543081fe6fdf0d2c3c5509f361449db545b
 /* color scheme:
 #FFB5A7 dark pink
 #FCD5CE medium pink
@@ -14,16 +8,12 @@
 
 body {
 }
-<<<<<<< HEAD
->>>>>>> 2051cf3aad97e4fea3394bc5478c5f420661ea24
-=======
 
->>>>>>> e172b543081fe6fdf0d2c3c5509f361449db545b
 .header {
-    color: rgb(235, 99, 99); 
+    color: rgb(235, 99, 99);
     height: 10rem;
     text-align: center;
-    background-color: #FCD5CE; 
+    background-color: #FCD5CE;
     border-style: 1px solid white;
     font-size: 5rem;
     font-family: 'Fredoka One', cursive;
@@ -31,14 +21,14 @@ body {
 
 .navbar {
     height: 4rem;
-    background-color: #FFB5A7; 
+    background-color: #FFB5A7;
     text-align: right;
 }
 .navbar-btn {
     height: 4rem;
     width: 10rem;
     border-style: none;
-    background-color: #FFB5A7; 
+    background-color: #FFB5A7;
 }
 .product-container {
     height: 15rem;
