@@ -1,5 +1,5 @@
 var items = []
-var cart = document.getElementById('.cartSticky')
+var cartSticky = document.getElementById('.cartSticky')
 $(document).ready(function() {
     
     //ADD TO CART button 
@@ -36,12 +36,17 @@ $(document).ready(function() {
         //Updates the cart within the sticky to reflect the current cart.
         refreshCart() 
     });
-    
+
     //Updates the cart within the sticky to reflect the current cart.
     function refreshCart () {
         //TODO change information to make it readable
-        var currentCart = localStorage.getItem("AddedToCart");
+        var currentCart = parse(localStorage.getItem("AddedToCart"));
         console.log(items);
+        cartSticky.innerHTML('<ul>')
+        for (let i = 0; i < currentCart.length; i ++) {
+            cartSticky.innerHTML('<li>' + currentCart + '</li>');
+        }
+        cartSticky.innerHTML('</ul>')
         //TODO appened the AddedToCart to the container :: <ul></ul> or <p></p>
         
     };
