@@ -1,43 +1,81 @@
+/* color scheme:
+#FFB5A7 dark pink
+#FCD5CE medium pink
+#F8EDEB light pink
+#F9DCC4 light peach
+#FEC89A peach */
 
 body {
+    background-color: #FCD5CE;
 }
+
 .header {
-    height: 10rem;
+    color: rgb(235, 99, 99);
+    height: 200px;               
     text-align: center;
-    border-style: solid;
-    color: aliceblue;
-    font-size: 5rem;
+    background-color: #FCD5CE;
+    border-style: 1px solid white;
+    font-size: 150px;               
+    font-family: 'Fredoka One', cursive;
 }
+
 .navbar {
     height: 4rem;
-    background-color: aqua;
+    background-color: #FFB5A7;
     text-align: right;
 }
 .navbar-btn {
     height: 4rem;
     width: 10rem;
     border-style: none;
-    background-color: aqua;
+    background-color: #FFB5A7;
+}
+
+.navbar-btn:focus{
+    background-color: rgb(235, 99, 99);   
+}
+
+.container{
+   width: 100vw; 
+   padding-top: 50px; 
 }
 .product-container {
     height: 15rem;
     display: flex;
     align-items: center;
-    background-color: blueviolet;
+    border-radius: 5px; 
+    background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
+}
+
+.image{
+    display:flex;
+    justify-content: flex-start; 
+    height: 200px; 
+    width: 300px;
+    float: right;
 }
 .addtocart-btn {
     margin: 5rem;
     height: 6rem;
     width: 12rem;
-    background-color: white;
 }
-.product-description {
-    
+
+#buttonColor{
+    background-color: rgb(235, 99, 99); 
 }
-p, img {
-    float: right;
+
+.sticky{
+    position: fixed;
+    width: 400px; 
+    height: 500px; 
+}
+
+.sticky{
+    position: fixed;
+    width: 400px; 
+    height: 500px; 
 }
 .hide {
     display: none;
