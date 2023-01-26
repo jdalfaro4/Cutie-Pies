@@ -1,11 +1,5 @@
 var items = []
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+var itemsWithPrices = [];
 
 
 $(document).ready(function() {
@@ -16,11 +10,18 @@ $(document).ready(function() {
     $('.atcBtn').click(function() {
         console.log("add to cart button pressed")
         var flavor = $(this).data('flavor');
-        items.push(flavor)
+        var price = $(this).prev('#price').text();
+        var cart = {flavor, price};
+        items.push(flavor);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
         $(this).next('.rmBtn').removeClass('hide');
-        console.log(items)
-        refreshCart()
+        var price = $(this).prev('#price').text; 
+      
+        Object.assign(cart, flavor, price);
+        itemsWithPrices.push(cart);
+        console.log(itemsWithPrices);
+        localStorage.setItem("AddedToCart", JSON.stringify(items));
+        refreshCart();
     });
 
     //REMOVE FROM CART button
@@ -43,7 +44,7 @@ $(document).ready(function() {
             cartSticky.innerHTML += "<li>" + currentCart[i] + "</li>";
         }
         cartSticky.innerHTML += "</ul>";  
+        console.log('Cart sticky updated')
     }
-    console.log('Cart sticky updated')
     
 });
