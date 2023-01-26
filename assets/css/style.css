@@ -7,47 +7,70 @@
 #FEC89A peach */
 
 body {
+    background-color: #FCD5CE;
 }
+
 .header {
-    color: rgb(235, 99, 99); 
-    height: 10rem;
+    color: rgb(235, 99, 99);
+    height: 200px;               
     text-align: center;
-    background-color: #FCD5CE; 
+    background-color: #FCD5CE;
     border-style: 1px solid white;
-    font-size: 5rem;
+    font-size: 150px;               
     font-family: 'Fredoka One', cursive;
 }
 
 .navbar {
     height: 4rem;
-    background-color: #FFB5A7; 
+    background-color: #FFB5A7;
     text-align: right;
 }
 .navbar-btn {
     height: 4rem;
     width: 10rem;
     border-style: none;
-    background-color: #FFB5A7; 
+    background-color: #FFB5A7;
+}
+
+.navbar-btn:focus{
+    background-color: rgb(235, 99, 99);   
+}
+
+.container{
+   width: 100vw; 
+   padding-top: 50px; 
 }
 .product-container {
     height: 15rem;
     display: flex;
     align-items: center;
+    border-radius: 5px; 
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
+}
+
+.image{
+    display:flex;
+    justify-content: flex-start; 
+    height: 200px; 
+    width: 300px;
+    float: right;
 }
 .addtocart-btn {
     margin: 5rem;
     height: 6rem;
     width: 12rem;
-    background-color: white;
 }
-.product-description {
-    
+
+#buttonColor{
+    background-color: rgb(235, 99, 99); 
 }
-p, img {
-    float: right;
+
+.sticky{
+    position: fixed;
+    width: 400px; 
+    height: 500px; 
 }
 .hide {
     display: none;
