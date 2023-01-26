@@ -8,15 +8,12 @@ $(document).ready(function() {
     
     //ADD TO CART button 
     $('.atcBtn').click(function() {
-
         var flavor = $(this).data('flavor');
         var price = $(this).prev('#price').text();
         var flavor = flavor + "-" + price
-
         items.push(flavor);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
         console.log(price)
-
         $(this).next('.rmBtn').removeClass('hide');
         refreshCart();
     });
