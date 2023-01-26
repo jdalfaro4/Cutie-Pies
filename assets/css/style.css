@@ -38,7 +38,6 @@ body {
 .container{
    width: 100vw; 
    padding-top: 50px; 
-
 }
 .product-container {
     height: 15rem;
@@ -64,7 +63,7 @@ body {
 
 #buttonColor{
     background-color: rgb(235, 99, 99); 
-}
+
 /* .product-description {
 
 } */
