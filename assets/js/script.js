@@ -1,8 +1,8 @@
 var items = []
 
 $(document).ready(function() {
-    
-    //ADD TO CART button 
+
+    //ADD TO CART button
     $('.atcBtn').click(function() {
         console.log("add to cart button pressed")
         var flavor = $(this).data('flavor');
@@ -17,11 +17,11 @@ $(document).ready(function() {
     $('.rmBtn').click(function(){
         console.log("remove from cart button pressed")
         var flavor = $(this).data('flavor')
-        var index = items.indexOf(flavor); 
+        var index = items.indexOf(flavor);
         items.splice(index, 1);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
         console.log(items)
-        refreshCart() 
+        refreshCart()
     });
 
     var cartSticky = document.getElementById('cartSticky')
@@ -32,7 +32,9 @@ $(document).ready(function() {
         for (let i = 0; i < currentCart.length; i ++) {
             cartSticky.innerHTML += "<li>" + currentCart[i] + "</li>";
         }
-        cartSticky.innerHTML += "</ul>";  
+        cartSticky.innerHTML += "</ul>";
     }
     console.log('Cart sticky updated')
 });
+
+
