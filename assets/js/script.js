@@ -8,19 +8,23 @@ $(document).ready(function() {
     
     //ADD TO CART button 
     $('.atcBtn').click(function() {
-        console.log("add to cart button pressed")
+
         var flavor = $(this).data('flavor');
         var price = $(this).prev('#price').text();
         var cart = {flavor, price};
+        var flavor = flavor + "-" + price
+
         items.push(flavor);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
-        $(this).next('.rmBtn').removeClass('hide');
-        var price = $(this).prev('#price').text; 
+        console.log(price)
+
       
         Object.assign(cart, flavor, price);
         itemsWithPrices.push(cart);
         console.log(itemsWithPrices);
-        localStorage.setItem("AddedToCart", JSON.stringify(items));
+        localStorage.setItem("AddedToCart2", JSON.stringify(itemsWithPrices));
+
+        $(this).next('.rmBtn').removeClass('hide');
         refreshCart();
     });
 
@@ -31,6 +35,11 @@ $(document).ready(function() {
         var index = items.indexOf(flavor); 
         items.splice(index, 1);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
+
+        var indexx = itemsWithPrices.indexOf(flavor); 
+        itemsWithPrices.splice(indexx, 1);
+        localStorage.setItem("AddedToCart2", JSON.stringify(itemsWithPrices));
+
         console.log(items)
         refreshCart() 
     });
