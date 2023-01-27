@@ -12,9 +12,8 @@ $(document).ready(function() {
         var price = $(this).prev('#price').text();
         var flavorPrice = flavor + "-" + price
         items.push(flavorPrice);
-        console.log(flavorPrice)
-        localStorage.setItem("AddedToCart", JSON.stringify(items));
-        // console.log(price)
+        console.log(flavorPrice);
+        localStorage.setItem("AddedToCart", JSON.stringify(items))
         $(this).next('.rmBtn').removeClass('hide');
         refreshCart();
     });
@@ -35,9 +34,6 @@ $(document).ready(function() {
     var cartSticky = document.getElementById('cartSticky')
     var cartStickyPrices = document.getElementById('cartStickyPrices')
 
-    //Price system ++
-
-
     //Updates the cart within the sticky to reflect the current cart.
     function refreshCart () {
         var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
@@ -48,6 +44,7 @@ $(document).ready(function() {
             var price = currentCart[i].split('-')[1];
             cartSticky.innerHTML += "<li>" + flavor + "</li>";
             cartStickyPrices.innerHTML += "<li>" + price + "</li>";
+        
         }
         cartStickyPrices.innerHTML += "</ul>";
         cartSticky.innerHTML += "</ul>";  
