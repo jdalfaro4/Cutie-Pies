@@ -38,3 +38,17 @@ $(document).ready(function() {
 });
 
 
+var apiurl2 ="https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=fd0d519865b662dfd044fa27b1e7cbf9&photoset_id=72177720305535430&user_id=197587105%40N08&format=json&nojsoncallback=1";
+$(document).ready(function(){
+    $.getJSON(apiurl2,function(response){
+         console.log(response);
+         $.each(response.photoset.photo,function(idx,photo){
+            console.log(photo);
+            //https://live.staticflickr.com/{server-id}/{id}_{secret}.jpg
+            var imageUrl ="https://live.staticflickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+".jpg";
+            console.log(imageUrl);
+            $("#"+photo.id).attr ("src",imageUrl);
+        })
+    })
+});
+
