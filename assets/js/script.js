@@ -12,8 +12,9 @@ $(document).ready(function() {
         var price = $(this).prev('#price').text();
         var flavorPrice = flavor + "-" + price
         items.push(flavorPrice);
+        console.log(flavorPrice)
         localStorage.setItem("AddedToCart", JSON.stringify(items));
-        console.log(price)
+        // console.log(price)
         $(this).next('.rmBtn').removeClass('hide');
         refreshCart();
     });
@@ -41,6 +42,7 @@ $(document).ready(function() {
     function refreshCart () {
         var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
         cartSticky.innerHTML = "<ul>";
+        cartStickyPrices.innerHTML = ""
         for (let i = 0; i < currentCart.length; i ++) {
             var flavor = currentCart[i].split('-')[0];
             var price = currentCart[i].split('-')[1];
@@ -51,7 +53,6 @@ $(document).ready(function() {
         cartSticky.innerHTML += "</ul>";  
         console.log('Cart sticky updated')
     }
-    
 });
 
 
