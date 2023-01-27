@@ -1,23 +1,30 @@
 var items = []
+var itemsWithPrices = [];
+
 
 $(document).ready(function() {
-
-    //ADD TO CART button
+    
+    $('.sidenav').sidenav();
+    
+    //ADD TO CART button 
     $('.atcBtn').click(function() {
-        console.log("add to cart button pressed")
         var flavor = $(this).data('flavor');
-        items.push(flavor)
-        localStorage.setItem("AddedToCart", JSON.stringify(items));
+        var price = $(this).prev('#price').text();
+        var flavorPrice = flavor + "-" + price
+        items.push(flavorPrice);
+        console.log(flavorPrice);
+        localStorage.setItem("AddedToCart", JSON.stringify(items))
         $(this).next('.rmBtn').removeClass('hide');
-        console.log(items)
-        refreshCart()
+        refreshCart();
     });
 
     //REMOVE FROM CART button
     $('.rmBtn').click(function(){
         console.log("remove from cart button pressed")
         var flavor = $(this).data('flavor')
-        var index = items.indexOf(flavor);
+        var price = $(this).prev().prev('#price').text();
+        var flavorPrice = flavor + "-" + price;
+        var index = items.indexOf(flavorPrice); 
         items.splice(index, 1);
         localStorage.setItem("AddedToCart", JSON.stringify(items));
         console.log(items)
@@ -25,16 +32,24 @@ $(document).ready(function() {
     });
 
     var cartSticky = document.getElementById('cartSticky')
+    var cartStickyPrices = document.getElementById('cartStickyPrices')
+
     //Updates the cart within the sticky to reflect the current cart.
     function refreshCart () {
         var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
         cartSticky.innerHTML = "<ul>";
+        cartStickyPrices.innerHTML = ""
         for (let i = 0; i < currentCart.length; i ++) {
-            cartSticky.innerHTML += "<li>" + currentCart[i] + "</li>";
+            var flavor = currentCart[i].split('-')[0];
+            var price = currentCart[i].split('-')[1];
+            cartSticky.innerHTML += "<li>" + flavor + "</li>";
+            cartStickyPrices.innerHTML += "<li>" + price + "</li>";
+        
         }
-        cartSticky.innerHTML += "</ul>";
+        cartStickyPrices.innerHTML += "</ul>";
+        cartSticky.innerHTML += "</ul>";  
+        console.log('Cart sticky updated')
     }
-    console.log('Cart sticky updated')
 });
 
 
