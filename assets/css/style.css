@@ -47,6 +47,7 @@ body {
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
+
 }
 
 .image{
@@ -57,11 +58,13 @@ body {
     float: right;
     aspect-ratio: 3/2;
     object-fit: contain;
+
 }
 .addtocart-btn {
     margin: 5rem;
     height: 6rem;
     width: 12rem;
+
 }
 
 #buttonColor{
