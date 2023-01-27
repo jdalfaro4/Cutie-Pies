@@ -74,11 +74,13 @@ body {
     height: 500px;
 }
 
+
 .sticky{
     position: fixed;
     width: 400px;
     height: 500px;
 }
+
 .hide {
     display: none;
 }
