@@ -57,8 +57,8 @@ body {
     width: 300px;
     float: right;
     aspect-ratio: 3/2;
-    /* object-fit: contain; */
-    border-radius: 50%;
+    object-fit: contain;
+    border-radius: 50px;
 }
 
 .addtocart-btn {
@@ -71,32 +71,44 @@ body {
 #buttonColor{
     background-color: rgb(235, 99, 99);
 }
-/* .product-description {
 
-} */
+.modal{
+    background-color: #FCD5CE; 
+}
+.modal-trigger{
+    margin-top: 10px; 
+    margin-right: 25px; 
+    background-color: rgb(235, 99, 99);
+}
+
+.modal-trigger:hover{
+    background-color: rgb(227, 144, 144);
+}
 
 .sticky{
     position: fixed;
     width: 400px;
     height: 500px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 974c1d4f16ac116d98ca53e02bd76844b6d12bb1
-
-.sticky{
-    position: fixed;
-    width: 400px;
-    height: 500px;
+#cartSticky li{
+    list-style-type: none;
+    padding-right: 10px; 
+    
 }
-<<<<<<< HEAD
-=======
->>>>>>> 492cbe69784678c446940966ed6c8c90d47de4dd
-=======
+#cartStickyPrices li{
+    list-style-type: none;
+}
 
->>>>>>> 974c1d4f16ac116d98ca53e02bd76844b6d12bb1
+#cart{
+    width: 200px; 
+    padding-bottom: 425px; 
+    padding-left: 145px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(235, 99, 99); 
+    font-size: 40px; 
+}
+
 .hide {
     display: none;
 }
