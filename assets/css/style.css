@@ -41,15 +41,15 @@ body {
 }
 
 .container{
-   width: 100vw; 
-   padding-top: 50px; 
+   width: 100vw;
+   padding-top: 50px;
 
 }
 .product-container {
     height: 15rem;
     display: flex;
     align-items: center;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
@@ -63,13 +63,14 @@ body {
     width: 300px;
     float: right;
     aspect-ratio: 3/2;
-    border-radius: 50%;
+    object-fit: contain;
+    border-radius: 50px;
 }
 
 .image{
     display:flex;
-    justify-content: flex-start; 
-    height: 200px; 
+    justify-content: flex-start;
+    height: 200px;
     width: 300px
 }
 .addtocart-btn {
@@ -79,23 +80,15 @@ body {
 }
 
 #buttonColor{
-    background-color: rgb(235, 99, 99); 
+    background-color: rgb(235, 99, 99);
 }
 
 .modal{
     background-color: #FCD5CE;
 }
-<<<<<<< HEAD
-.modal-trigger{
-    margin-top: 10px;
-    margin-right: 25px;
-    background-color: rgb(235, 99, 99);
-}
-=======
->>>>>>> f88656c499516705978ae19b2ea7a97f61894b13
 
 .waves-effect{
-    z-index: 0; 
+    z-index: 0;
 }
 img {
     float: right;
@@ -103,8 +96,8 @@ img {
 
 .sticky{
     position: fixed;
-    width: 400px; 
-    height: 500px; 
+    width: 400px;
+    height: 500px;
 }
 
 #cartSticky li{
@@ -126,11 +119,9 @@ img {
 }
 
 .celebrate {
-    height: 400px; 
+    height: 400px;
 }
 
 .hide {
     display: none;
 }
-
-
