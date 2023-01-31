@@ -41,15 +41,15 @@ body {
 }
 
 .container{
-   width: 100vw; 
-   padding-top: 50px; 
+   width: 100vw;
+   padding-top: 50px;
 
 }
 .product-container {
     height: 15rem;
     display: flex;
     align-items: center;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
@@ -69,8 +69,8 @@ body {
 
 .image{
     display:flex;
-    justify-content: flex-start; 
-    height: 200px; 
+    justify-content: flex-start;
+    height: 200px;
     width: 300px
 }
 .addtocart-btn {
@@ -80,15 +80,15 @@ body {
 }
 
 #buttonColor{
-    background-color: rgb(235, 99, 99); 
+    background-color: rgb(235, 99, 99);
 }
 
 .modal{
-    background-color: #FCD5CE; 
+    background-color: #FCD5CE;
 }
 
 .waves-effect{
-    z-index: 0; 
+    z-index: 0;
 }
 img {
     float: right;
@@ -96,34 +96,32 @@ img {
 
 .sticky{
     position: fixed;
-    width: 400px; 
-    height: 500px; 
+    width: 400px;
+    height: 500px;
 }
 
 #cartSticky li{
     list-style-type: none;
-    padding-right: 10px; 
-    
+    padding-right: 10px;
+
 }
 #cartStickyPrices li{
     list-style-type: none;
 }
 
 #cart{
-    width: 200px; 
-    padding-bottom: 425px; 
-    padding-left: 145px; 
+    width: 200px;
+    padding-bottom: 425px;
+    padding-left: 145px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(235, 99, 99); 
-    font-size: 40px; 
+    color: rgb(235, 99, 99);
+    font-size: 40px;
 }
 
 .celebrate {
-    height: 400px; 
+    height: 400px;
 }
 
 .hide {
     display: none;
 }
-
-
