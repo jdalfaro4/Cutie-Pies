@@ -7,20 +7,24 @@
 
 body {
     background-color: #FCD5CE;
+    background-color: #FCD5CE;
 }
+
 
 .header {
     color: rgb(235, 99, 99);
-    height: 200px;
+    height: 200px;               /*<-----edit*/
     text-align: center;
     background-color: #FCD5CE;
+    background-color: #FCD5CE;
     border-style: 1px solid white;
-    font-size: 150px;
+    font-size: 150px;               /*<-----edit*/
     font-family: 'Fredoka One', cursive;
 }
 
 .navbar {
     height: 4rem;
+    background-color: #FFB5A7;
     background-color: #FFB5A7;
     text-align: right;
 }
@@ -29,21 +33,23 @@ body {
     width: 10rem;
     border-style: none;
     background-color: #FFB5A7;
+    background-color: #FFB5A7;
 }
 
 .navbar-btn:focus{
-    background-color: rgb(235, 99, 99);
+    background-color: rgb(235, 99, 99);   /*<-----edit*/
 }
 
 .container{
-   width: 100vw;
-   padding-top: 50px;
+   width: 100vw; 
+   padding-top: 50px; 
+
 }
 .product-container {
     height: 15rem;
     display: flex;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 5px; 
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
@@ -61,54 +67,33 @@ body {
     border-radius: 50px;
 }
 
+.image{
+    display:flex;
+    justify-content: flex-start; 
+    height: 200px; 
+    width: 300px
+}
 .addtocart-btn {
     margin: 5rem;
     height: 6rem;
     width: 12rem;
-
 }
 
 #buttonColor{
-    background-color: rgb(235, 99, 99);
+    background-color: rgb(235, 99, 99); 
 }
+/* .product-description {
 
-.modal{
-    background-color: #FCD5CE; 
-}
-.modal-trigger{
-    margin-top: 10px; 
-    margin-right: 25px; 
-    background-color: rgb(235, 99, 99);
-}
-
-.modal-trigger:hover{
-    background-color: rgb(227, 144, 144);
+} */
+img {
+    float: right;
 }
 
 .sticky{
     position: fixed;
-    width: 400px;
-    height: 500px;
+    width: 400px; 
+    height: 500px; 
 }
-
-#cartSticky li{
-    list-style-type: none;
-    padding-right: 10px; 
-    
-}
-#cartStickyPrices li{
-    list-style-type: none;
-}
-
-#cart{
-    width: 200px; 
-    padding-bottom: 425px; 
-    padding-left: 145px; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(235, 99, 99); 
-    font-size: 40px; 
-}
-
 .hide {
     display: none;
 }
