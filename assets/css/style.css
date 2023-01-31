@@ -57,8 +57,7 @@ body {
     width: 300px;
     float: right;
     aspect-ratio: 3/2;
-    object-fit: contain;
-    border-radius: 50px;
+    border-radius: 50%;
 }
 
 .addtocart-btn {
@@ -73,11 +72,11 @@ body {
 }
 
 .modal{
-    background-color: #FCD5CE; 
+    background-color: #FCD5CE;
 }
 .modal-trigger{
-    margin-top: 10px; 
-    margin-right: 25px; 
+    margin-top: 10px;
+    margin-right: 25px;
     background-color: rgb(235, 99, 99);
 }
 
@@ -93,20 +92,20 @@ body {
 
 #cartSticky li{
     list-style-type: none;
-    padding-right: 10px; 
-    
+    padding-right: 10px;
+
 }
 #cartStickyPrices li{
     list-style-type: none;
 }
 
 #cart{
-    width: 200px; 
-    padding-bottom: 425px; 
-    padding-left: 145px; 
+    width: 200px;
+    padding-bottom: 425px;
+    padding-left: 145px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(235, 99, 99); 
-    font-size: 40px; 
+    color: rgb(235, 99, 99);
+    font-size: 40px;
 }
 
 .hide {
