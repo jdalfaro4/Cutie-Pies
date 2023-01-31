@@ -2,12 +2,14 @@ var items = []
 var itemsWithPrices = [];
 
 
+
 $(document).ready(function () {
 
     $('.sidenav').sidenav();
 
     //ADD TO CART button 
     $('.atcBtn').click(function () {
+    
         var flavor = $(this).data('flavor');
         var price = $(this).prev('#price').text().split('$')[0];
         console.log(price)
@@ -45,12 +47,13 @@ $(document).ready(function () {
             var flavor = currentCart[i].split('-')[0];
             var price = currentCart[i].split('-')[1];
             cartSticky.innerHTML += "<li>" + flavor + "</li>";
+
+            cartStickyPrices.innerHTML += "<li>" + price + "</li>";
+
             var cartLineItems = cartStickyPrices.innerHTML += "<li>" + price + "</li>";
 
             //Creates a accumulated total for the entire order
             function totalPrice() {
-                var cartSticky = document.getElementById('cartSticky')
-                var cartStickyPrices = document.getElementById('cartStickyPrices')
                 var checkoutBin = document.getElementById('checkoutBin')
                 var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
                 let runningTotal = 0;
@@ -62,6 +65,7 @@ $(document).ready(function () {
                 checkoutBin.innerHTML = "$" + runningTotal
                 console.log(runningTotal)
             };
+
         }
         cartStickyPrices.innerHTML += "</ul>";
         cartSticky.innerHTML += "</ul>";
@@ -77,13 +81,12 @@ $(document).ready(function () {
 });
 
 
+var apiurl2 ="https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=fd0d519865b662dfd044fa27b1e7cbf9&photoset_id=72177720305535430&user_id=197587105%40N08&format=json&nojsoncallback=1";
+$(document).ready(function(){
+    $.getJSON(apiurl2,function(response){
+         console.log(response);
+         $.each(response.photoset.photo,function(idx,photo){
 
-
-var apiurl2 = "https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=fd0d519865b662dfd044fa27b1e7cbf9&photoset_id=72177720305535430&user_id=197587105%40N08&format=json&nojsoncallback=1";
-$(document).ready(function () {
-    $.getJSON(apiurl2, function (response) {
-        console.log(response);
-        $.each(response.photoset.photo, function (idx, photo) {
             console.log(photo);
             //https://live.staticflickr.com/{server-id}/{id}_{secret}.jpg
             var imageUrl = "https://live.staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
@@ -92,4 +95,55 @@ $(document).ready(function () {
         })
     })
 });
+// const checkoutButton = document.querySelector('#checkoutButton');
 
+
+function checkoutButton() {
+    const apiurl3 = "https://api.giphy.com/v1/gifs/cKVUvW2RMJ6UaBzJxn?api_key=8rPbTKt8rKzlOnJfCxcQN8gPIo4aqgDE";
+
+    fetch(apiurl3)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function cartCelebration
+// var apiurl3  ="https://api.giphy.com/v1/gifs/cKVUvW2RMJ6UaBzJxn?api_key=8rPbTKt8rKzlOnJfCxcQN8gPIo4aqgDE";
+
+
+// $(document).ready(function(){
+//     $.getJSON(apiurl3,function(response){
+//          console.log(response);
+//          $.each(response.photoset.photo,function(idx,photo){
+//             console.log(photo);
+//             //https://live.staticflickr.com/{server-id}/{id}_{secret}.jpg
+//             // var imageUrl ="https://live.staticflickr.com/"+photo.server+"/"+photo.id+"_"+photo.secret+".jpg";
+//             console.log(imageUrl);
+//             $("#"+photo.id).attr ("src",imageUrl);
+//         })
+//     })
+// });

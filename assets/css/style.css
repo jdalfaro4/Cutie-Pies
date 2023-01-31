@@ -43,7 +43,7 @@ body {
     height: 15rem;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
@@ -60,6 +60,7 @@ body {
     object-fit: contain;
     border-radius: 50px;
 }
+
 .addtocart-btn {
     margin: 5rem;
     height: 6rem;
