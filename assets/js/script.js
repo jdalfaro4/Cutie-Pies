@@ -91,3 +91,15 @@ $(document).ready(function () {
     })
 });
 
+function checkoutButton() {
+    const apiurl3 = "https://api.giphy.com/v1/gifs/cKVUvW2RMJ6UaBzJxn?api_key=8rPbTKt8rKzlOnJfCxcQN8gPIo4aqgDE";
+
+    fetch(apiurl3)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
