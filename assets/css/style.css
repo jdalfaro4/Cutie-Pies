@@ -82,9 +82,14 @@ body {
 #buttonColor{
     background-color: rgb(235, 99, 99); 
 }
-/* .product-description {
 
-} */
+.modal{
+    background-color: #FCD5CE; 
+}
+
+.waves-effect{
+    z-index: 0; 
+}
 img {
     float: right;
 }
@@ -94,6 +99,29 @@ img {
     width: 400px; 
     height: 500px; 
 }
+
+#cartSticky li{
+    list-style-type: none;
+    padding-right: 10px; 
+    
+}
+#cartStickyPrices li{
+    list-style-type: none;
+}
+
+#cart{
+    width: 200px; 
+    padding-bottom: 425px; 
+    padding-left: 145px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(235, 99, 99); 
+    font-size: 40px; 
+}
+
+.celebrate {
+    height: 400px; 
+}
+
 .hide {
     display: none;
 }
