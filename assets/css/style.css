@@ -58,7 +58,7 @@ body {
     float: right;
     aspect-ratio: 3/2;
     object-fit: contain;
-
+    border-radius: 50px;
 }
 .addtocart-btn {
     margin: 5rem;
@@ -79,23 +79,13 @@ body {
     width: 400px;
     height: 500px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 974c1d4f16ac116d98ca53e02bd76844b6d12bb1
 
 .sticky{
     position: fixed;
     width: 400px;
     height: 500px;
 }
-<<<<<<< HEAD
-=======
->>>>>>> 492cbe69784678c446940966ed6c8c90d47de4dd
-=======
 
->>>>>>> 974c1d4f16ac116d98ca53e02bd76844b6d12bb1
 .hide {
     display: none;
 }
