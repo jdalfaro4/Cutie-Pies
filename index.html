@@ -16,12 +16,32 @@
     <div>
         <div class="header">Cutie Pies</div>
         <div class="navbar">
-            <a href="assets/html/about.html">
-                <button class="navbar-btn">About</button>
-            </a>
-            <button class="navbar-btn">Contact</button>
-            <button class="navbar-btn">Cart</button>
+
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">About</a>
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>About Cutie Pies</h4>
+                  <p>Welcome to Cutie Pies! If you are wondering a bit more about who we are, we are glad to take you for a ride. We originated in Austin, Tx, with very humble beginnings but currently reside in multiple cities across the southwest region. Our pie flavors are as amazing as the employees who work here! Originally Cutie Pies started off as a household pie shop with only 2 flavors and once we became overwhelmed with daily orders we quickly expanded our menu upon many many MANY customer requests. Now we are up to 6 delicious and unique pie flavors that will zip through your tastebuds! Texas is a wonderful place to try delicious one of a kind treats, and Cutie Pies is at the top of the list! Please stop by any one of our retail locations to stock up on your favorite Cutie Pie slices!</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
+
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Contact</a>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h4>Contact Information</h4>
+                  <p>123 Main Street, USA</p>
+                  <p>555-555-5555</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+              </div>
         </div>
+
+
         <div class="container">
             <div class="row mainbody">
                 <div class="col s8">
@@ -115,6 +135,7 @@
         </div>
         <div class="col s4 push-s1">
             <div class="product-container sticky">
+                <p id="cart">CART</p>
                 <p id="cartSticky"></p>
                 <p id="cartStickyPrices"></p>
                 <div id="checkoutBin"></div>
