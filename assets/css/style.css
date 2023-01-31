@@ -43,7 +43,7 @@ body {
     height: 15rem;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: #F9DCC4;
     border-style: solid;
     border-color: white;
@@ -57,9 +57,10 @@ body {
     width: 300px;
     float: right;
     aspect-ratio: 3/2;
-    object-fit: contain;
-
+    /* object-fit: contain; */
+    border-radius: 50%;
 }
+
 .addtocart-btn {
     margin: 5rem;
     height: 6rem;
