@@ -9,6 +9,7 @@ This project proved most challenging as there were so many aspects to actually s
 API's are still new to us so this was another obstacle we had to face but when teamed up with some brilliant people, we accomplished our goals. The CSS gave us a whole new branch of issues since we couldn't use the framework we were most familiar with -Bootstrap- but as a team, we were able to succeed. This web page will bring you in and make you feel at home, but most of all you will feel the odd feeling of needing a slice of pie.
 
 ## Screenshot
+<img width="1586" alt="Screenshot 2023-01-31 at 9 54 16 PM" src="https://user-images.githubusercontent.com/118412985/215941610-66bdc664-104a-48ae-a181-3d3be2c3bdd0.png">
 
 ## Link 
 
