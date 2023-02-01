@@ -6,6 +6,10 @@ $(document).ready(function () {
 
     $('.sidenav').sidenav();
 
+    window.onload = function(){
+        refreshCart()
+    }
+
     //ADD TO CART button 
     $('.atcBtn').click(function () {
         var flavor = $(this).data('flavor');
@@ -34,6 +38,7 @@ $(document).ready(function () {
 
     var cartSticky = document.getElementById('cartSticky')
     var cartStickyPrices = document.getElementById('cartStickyPrices')
+    var priceTotalCheckout = document.getElementById('priceTotalCheckout')
 
 
     //Updates the cart within the sticky to reflect the current cart.
@@ -45,8 +50,8 @@ $(document).ready(function () {
             var flavor = currentCart[i].split('-')[0];
             var price = currentCart[i].split('-')[1];
             cartSticky.innerHTML += "<li>" + flavor + "</li>";
-            var cartLineItems = cartStickyPrices.innerHTML += "<li>" + price + "</li>";
-
+            cartStickyPrices.innerHTML += "<li>" + price + "</li>";
+        }
             //Creates a accumulated total for the entire order
             function totalPrice() {
                 var checkoutBin = document.getElementById('checkoutBin')
@@ -58,13 +63,12 @@ $(document).ready(function () {
                     runningTotal = runningTotal + itemPrice;
                 }
                 checkoutBin.innerHTML = "$" + runningTotal
+                priceTotalCheckout.innerHTML= "Your Total: $" + runningTotal
                 console.log(runningTotal)
             };
-        }
         cartStickyPrices.innerHTML += "</ul>";
         cartSticky.innerHTML += "</ul>";
         console.log('Cart sticky updated')
-
         totalPrice()
     };
 
