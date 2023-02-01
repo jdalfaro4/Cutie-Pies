@@ -25,19 +25,34 @@ body {
 .navbar {
     height: 4rem;
     background-color: #FFB5A7;
-    background-color: #FFB5A7;
     text-align: right;
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center;
 }
 .navbar-btn {
     height: 4rem;
     width: 10rem;
     border-style: none;
     background-color: #FFB5A7;
-    background-color: #FFB5A7;
+}
+#navbutton1, #navbutton2{
+    margin: 10px; 
 }
 
 .navbar-btn:focus{
     background-color: rgb(235, 99, 99);   /*<-----edit*/
+}
+
+#navbutton1, #navbutton2, #checkoutButton{
+    background-color: rgb(235, 99, 99);
+}
+
+#checkoutButton{
+    position: absolute; 
+    top: 420px; 
+    right: 60px;
+    color: white; 
 }
 
 .container{
