@@ -7,18 +7,16 @@
 
 body {
     background-color: #FCD5CE;
-    background-color: #FCD5CE;
 }
 
 
 .header {
     color: rgb(235, 99, 99);
-    height: 200px;               /*<-----edit*/
+    height: 200px;               
     text-align: center;
     background-color: #FCD5CE;
-    background-color: #FCD5CE;
     border-style: 1px solid white;
-    font-size: 150px;               /*<-----edit*/
+    font-size: 150px;               
     font-family: 'Fredoka One', cursive;
 }
 
@@ -41,7 +39,7 @@ body {
 }
 
 .navbar-btn:focus{
-    background-color: rgb(235, 99, 99);   /*<-----edit*/
+    background-color: rgb(235, 99, 99);   
 }
 
 #navbutton1, #navbutton2, #checkoutButton{
@@ -79,7 +77,6 @@ body {
     float: right;
     aspect-ratio: 3/2;
     object-fit: contain;
-    border-radius: 50px;
 }
 
 .image{
@@ -111,26 +108,38 @@ img {
 
 .sticky{
     position: fixed;
-    width: 400px;
+    width: 450px;
     height: 500px;
-}
-
-#cartSticky li{
-    list-style-type: none;
-    padding-right: 10px;
-
-}
-#cartStickyPrices li{
-    list-style-type: none;
+    border-radius: 5px;
+    background-color: #F9DCC4;
+    border-style: solid;
+    border-color: white;
 }
 
 #cart{
-    width: 200px;
-    padding-bottom: 425px;
-    padding-left: 145px;
+    text-align: center; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(235, 99, 99);
     font-size: 40px;
+}
+
+#cartSticky li, #cartStickyPrices li{
+    list-style-type: none;
+    padding-left: 130px; 
+
+}
+
+#checkoutBin, #total{
+    padding-left: 130px; 
+    font-weight: bolder; 
+}
+
+#checkoutButton{
+    position: absolute; 
+    top: 400px; 
+    right: 40px; 
+    color: white; 
+
 }
 
 .celebrate {

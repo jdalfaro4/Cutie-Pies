@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     $('.sidenav').sidenav();
 
-    window.onload = function(){
+    window.onload = function () {
         refreshCart()
     }
 
@@ -20,6 +20,8 @@ $(document).ready(function () {
         console.log(flavorPrice);
         localStorage.setItem("AddedToCart", JSON.stringify(items))
         $(this).next('.rmBtn').removeClass('hide');
+        $('#total').removeClass('hide');
+        $('.pulse').removeClass('hide');
         refreshCart();
     });
 
@@ -52,20 +54,20 @@ $(document).ready(function () {
             cartSticky.innerHTML += "<li>" + flavor + "</li>";
             cartStickyPrices.innerHTML += "<li>" + price + "</li>";
         }
-            //Creates a accumulated total for the entire order
-            function totalPrice() {
-                var checkoutBin = document.getElementById('checkoutBin')
-                var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
-                let runningTotal = 0;
-                for (let i = 0; i < currentCart.length; i++) {
-                    let cartPrices = currentCart[i];
-                    const itemPrice = parseFloat(cartPrices.split('-')[1]);
-                    runningTotal = runningTotal + itemPrice;
-                }
-                checkoutBin.innerHTML = "$" + runningTotal
-                priceTotalCheckout.innerHTML= "Your Total: $" + runningTotal
-                console.log(runningTotal)
-            };
+        //Creates a accumulated total for the entire order
+        function totalPrice() {
+            var checkoutBin = document.getElementById('checkoutBin')
+            var currentCart = JSON.parse(localStorage.getItem("AddedToCart"));
+            let runningTotal = 0;
+            for (let i = 0; i < currentCart.length; i++) {
+                let cartPrices = currentCart[i];
+                const itemPrice = parseFloat(cartPrices.split('-')[1]);
+                runningTotal = runningTotal + itemPrice;
+            }
+            checkoutBin.innerHTML = "$" + runningTotal
+            priceTotalCheckout.innerHTML = "Your Total: $" + runningTotal
+            console.log(runningTotal)
+        };
         cartStickyPrices.innerHTML += "</ul>";
         cartSticky.innerHTML += "</ul>";
         console.log('Cart sticky updated')

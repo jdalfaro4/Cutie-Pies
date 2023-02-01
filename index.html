@@ -135,20 +135,35 @@
 
         </div>
         <div class="col s4 push-s1">
-            <div class="product-container sticky">
+            <div class="sticky">
+                <div class="row">
                 <p id="cart">CART</p>
+            </div>
+            <div class="row">
+                <div class="col s4">
                 <p id="cartSticky"></p>
+                <p id="total" class="hide">Total: </p>
+            </div>
+            <div class="col s2">
                 <p id="cartStickyPrices"></p>
                 <div id="checkoutBin"></div>
-                <button onclick="checkoutButton()" class="waves-effect waves-light btn modal-trigger pulse" href="#modal3" id="checkoutButton">Checkout</button>
+
+            </div>
+            </div>
+            <!-- <div class="row">
+                <div id="checkoutBin"></div>
+            </div> -->
+            <div class="row">
+                <button onclick="checkoutButton()" class="waves-effect waves-light btn modal-trigger pulse hide" href="#modal3" id="checkoutButton">Checkout</button>
                 <div id="modal3" class="modal">
                     <div class="modal-content celebrate">
-                      <h4 id="priceTotalCheckout">Your total:</h4>
+                      <h4>Your total:</h4>
                       <img id="cartCelebration">
                     </div>
                     <div class="modal-footer">
                       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                     </div>
+                </div>
 
 
 
