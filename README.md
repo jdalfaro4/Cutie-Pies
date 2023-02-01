@@ -1,6 +1,6 @@
 # Cutie-Pies
 
-[Here](www.google.com) is the link to the website. 
+[Here](https://jdalfaro4.github.io/Cutie-Pies/) is the link to the website. 
 
 ## Description
 
